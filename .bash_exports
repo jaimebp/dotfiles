@@ -1,0 +1,7 @@
+export GOPATH=$HOME/go
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8-openj9.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+
+export MAVEN_HOME=$HOME/Software/apache-maven-3.6.2
+export PROTOC_PATH=$HOME/Software/protoc-3.10.1
+export PATH=$MAVEN_HOME/bin:$PROTOC_PATH:$PATH
