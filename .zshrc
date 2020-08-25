@@ -24,14 +24,24 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 function openNeoVim {
-	if [ $# -eq 0 ]; then
-		nvim ./
-  	else
-    		nvim $1
-  	fi
+    if [ $# -eq 0 ]; then
+	nvim ./
+    else
+	nvim $1
+    fi
 }
-
 alias v=openNeoVim
+
+if [ "$(command -v bat)" ]; then
+    unalias -m 'cat'
+    alias cat='bat'
+fi
+
+if [ "$(command -v btm)" ]; then
+    unalias -m 'top'
+    alias top='btm'
+fi
+
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
